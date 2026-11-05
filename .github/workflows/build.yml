@@ -23,9 +23,7 @@ jobs:
 
       - name: Build APK
         run: |
-          flet build apk --yes --verbose
-        env:
-          CI: "true"
+          echo "y" | flet build apk --verbose
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
