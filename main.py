@@ -411,4 +411,7 @@ def main(page: ft.Page):
         ], spacing=10)
     )
 
-ft.app(target=main)
+try:
+    ft.app(target=main)
+except AttributeError:
+    ft.run(main)
